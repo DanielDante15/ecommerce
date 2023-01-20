@@ -61,6 +61,9 @@ class Order(models.Model):
     def __str__(self):
         return str(self.id)
 
+
+        
+
     @property
     def get_cart_total(self):
         order_items = self.orderitem_set.all()

@@ -33,17 +33,17 @@
                         <input class="form-control" type="text" name="country" placeholder="Country">
                     </div>
                     <div class="form-field" style="width: 250px;display: inline-block;padding: 5px;">
-                        <input id="zip-code" class="form-control"  type="text" name="zipcode" placeholder="Zip code"">
+                        <input id="zip-code" class="form-control"  type="text" name="zipcode" placeholder="Zip code">
                     </div>
                 </div>
 
                 <hr>
-                <input form="form-button" class="btn btn-success btn-block rounded-0 " type="submit" value="Continue">
+                <input id="form-button" class="btn btn-success btn-block rounded-0 " type="submit" value="Continue">
             </form>
 
         </div>
         <br>
-        <div class="box-element visually-hidden-focusable" id="payment-info">
+        <div class="box-element visually-hidden" id="payment-info">
             <small>Paypal Options</small>
         </div>
     </div>
@@ -67,4 +67,16 @@
         </div>
     </div>
 </div>
+<script type="text/javascript">
+
+    var form = document.getElementById('form')
+
+    form.addEventListener('submit',function(e) {
+        e.preventDefault()
+        console.log('Form submitted')
+        document.getElementById('form-button').classList.add('hidden')
+        document.getElementById('payment-info').classList.remove('visually-hidden-focusable')
+    })
+
+</script>
 {% endblock content %}

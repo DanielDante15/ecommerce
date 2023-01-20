@@ -13,6 +13,7 @@ for (let index = 0; index < updateBtns.length; index++) {
       }
       else{
         updateUserOrder(productId,action)
+
       }
   })
 
@@ -21,19 +22,21 @@ for (let index = 0; index < updateBtns.length; index++) {
 function updateUserOrder(productId,action) {
   console.log('Authenticated, sending data...');
 
-  var url = 'update_item/'
+  var url = '/update_item/'
 
   fetch(url,{
     method:'POST',
     headers:{
       'Content-Type':'application/json',
-      'X-CSRFToken': csrftoken
+      'X-CSRFToken': csrftoken,
     },
     body:JSON.stringify({'productId':productId,'action':action})
   }).then((response)=>{
     return response.json();
   }).then((data)=>{
+    console.log('data',data)
     location.reload()
+    
   })
 
 

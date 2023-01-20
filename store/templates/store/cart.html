@@ -45,15 +45,18 @@
                 <div style="flex: 1;display: flex;height: 26px;" class="d-none d-md-block">
                     <p class="quantity">{{item.qtd}}</p>
                     <div class="quantity">
-                        <img  class="chg-qtd" src="{% static 'images/setacima.png' %}" alt="">
-                        <img  class="chg-qtd" src="{% static 'images/setabaixo.png' %}" alt="">
+                        <img  data-product={{item.product.id}} data-action="add" class="chg-qtd update-cart" src="{% static 'images/setacima.png' %}" alt="ee">
+                        
+                        <img  data-product={{item.product.id}} data-action="remove" class="chg-qtd update-cart" src="{% static 'images/setabaixo.png' %}" alt="ee">
                     </div>
                 </div>
+
                 <div style="flex: 2;display: flex;height: 26px;" class="d-md-none">
                     <p class="quantity">{{item.qtd}}</p>
                     <div class="quantity">
-                        <img  class="chg-qtd" src="{% static 'images/setacima.png' %}" alt="">
-                        <img  class="chg-qtd" src="{% static 'images/setabaixo.png' %}" alt="">
+                        <img  data-product={{item.product.id}} data-action="add" class="chg-qtd update-cart" src="{% static 'images/setacima.png' %}" alt="ee">
+                        
+                        <img  data-product={{item.product.id}} data-action="remove" class="chg-qtd update-cart" src="{% static 'images/setabaixo.png' %}" alt="ee">
                     </div>
                 </div>
                 <div style="flex: 1;">${{item.get_total}}</div>

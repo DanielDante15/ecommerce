@@ -14,11 +14,11 @@
             {% if product.size != none %}
             <h6>Tamanho: {{ product.size }}</h6>
             {%else %}
-            <hr style="height: 3px; inline-size: 0%;">
+            <hr style="height: 3px; inline-size: 0%">
             {% endif %}
             <small>{{ product.description }}</small>
             <hr>
-            <button data-product="{{product.id}}" data-action="add" class="btn btn-outline-primary rounded-0 add-btn update-cart ">Add to Cart</button>
+            <button data-product="{{product.id}}" data-action="add" class="btn btn-outline-primary rounded-0 add-btn update-cart">Add to Cart</button>
             <a href="" class="btn btn-outline-dark rounded-0">View</a>
             <h4 style=" float:right;margin-right: 10px;">${{ product.price }}</h4>
 
